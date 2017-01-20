@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "BOMPlayerViewController.h"
+#import "XCPlayer.h"
 
 @interface ViewController ()
 {
@@ -31,12 +32,14 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    UIStoryboard *story = [UIStoryboard storyboardWithName:@"BOMPlayer" bundle:nil];
-    self.player  = [story instantiateViewControllerWithIdentifier:@"PlayerVC"];
-    //    player.view.frame = CGRectMake(100, 100, 200, 200);
-    [self.view addSubview:self.player.view];
-    [self.player updateVideoUrlString:paths[index]];
-    
+//    UIStoryboard *story = [UIStoryboard storyboardWithName:@"BOMPlayer" bundle:nil];
+//    self.player  = [story instantiateViewControllerWithIdentifier:@"PlayerVC"];
+//    //    player.view.frame = CGRectMake(100, 100, 200, 200);
+//    [self.view addSubview:self.player.view];
+//    [self.player updateVideoUrlString:paths[index]];
+    XCPlayer *player = [[XCPlayer alloc] initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, 200)];
+    [player updateVideoUrlString:paths[index]];
+    [self.view addSubview:player];
 }
 
 
