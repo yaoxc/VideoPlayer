@@ -15,17 +15,15 @@
 		EB537B3A1E138854004EC9AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB537B381E138854004EC9AB /* LaunchScreen.storyboard */; };
 		EB537B451E138855004EC9AB /* VideoPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB537B441E138855004EC9AB /* VideoPlayerTests.m */; };
 		EB537B501E138855004EC9AB /* VideoPlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB537B4F1E138855004EC9AB /* VideoPlayerUITests.m */; };
-		EB537B661E1388DB004EC9AB /* BOMPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB537B641E1388DB004EC9AB /* BOMPlayerViewController.m */; };
 		EB537B6A1E1389E7004EC9AB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB537B691E1389E7004EC9AB /* AVFoundation.framework */; };
-		EB720D8F1E30531900BDA526 /* BOMPlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB720D8E1E30531900BDA526 /* BOMPlayer.storyboard */; };
 		EB720DDA1E30AA2E00BDA526 /* pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB720DD61E30AA2E00BDA526 /* pause@2x.png */; };
 		EB720DDB1E30AA2E00BDA526 /* pause@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB720DD71E30AA2E00BDA526 /* pause@3x.png */; };
 		EB720DDC1E30AA2E00BDA526 /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB720DD81E30AA2E00BDA526 /* play@2x.png */; };
 		EB720DDD1E30AA2E00BDA526 /* play@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB720DD91E30AA2E00BDA526 /* play@3x.png */; };
-		EB720DE21E30AA5000BDA526 /* fullscreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB720DDE1E30AA5000BDA526 /* fullscreen@2x.png */; };
-		EB720DE31E30AA5000BDA526 /* fullscreen@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB720DDF1E30AA5000BDA526 /* fullscreen@3x.png */; };
-		EB720DE41E30AA5000BDA526 /* nonfullscreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB720DE01E30AA5000BDA526 /* nonfullscreen@2x.png */; };
-		EB720DE51E30AA5000BDA526 /* nonfullscreen@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB720DE11E30AA5000BDA526 /* nonfullscreen@3x.png */; };
+		EB720DE21E30AA5000BDA526 /* tobig@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB720DDE1E30AA5000BDA526 /* tobig@2x.png */; };
+		EB720DE31E30AA5000BDA526 /* tobig@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB720DDF1E30AA5000BDA526 /* tobig@3x.png */; };
+		EB720DE41E30AA5000BDA526 /* tosmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB720DE01E30AA5000BDA526 /* tosmall@2x.png */; };
+		EB720DE51E30AA5000BDA526 /* tosmall@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB720DE11E30AA5000BDA526 /* tosmall@3x.png */; };
 		EB720DE81E30AACE00BDA526 /* placeHolder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB720DE61E30AACE00BDA526 /* placeHolder@2x.png */; };
 		EB720DE91E30AACE00BDA526 /* placeHolder@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB720DE71E30AACE00BDA526 /* placeHolder@3x.png */; };
 		EB720DF01E30AB2B00BDA526 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB720DEE1E30AB2B00BDA526 /* back@2x.png */; };
@@ -34,6 +32,8 @@
 		EBB4E9C11E31F02B00FD0709 /* XCPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB4E9C01E31F02B00FD0709 /* XCPlayer.m */; };
 		EBB4E9C41E31F97C00FD0709 /* XCTopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB4E9C31E31F97C00FD0709 /* XCTopMenu.m */; };
 		EBB4E9C71E31F98E00FD0709 /* XCBottomMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB4E9C61E31F98E00FD0709 /* XCBottomMenu.m */; };
+		EBB4E9CD1E320D1000FD0709 /* SCYLayerAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB4E9CA1E320D1000FD0709 /* SCYLayerAddition.m */; };
+		EBB4E9CE1E320D1000FD0709 /* UIView+SCYCategory..m in Sources */ = {isa = PBXBuildFile; fileRef = EBB4E9CB1E320D1000FD0709 /* UIView+SCYCategory..m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,18 +70,15 @@
 		EB537B4B1E138855004EC9AB /* VideoPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB537B4F1E138855004EC9AB /* VideoPlayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerUITests.m; sourceTree = "<group>"; };
 		EB537B511E138855004EC9AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EB537B631E1388DB004EC9AB /* BOMPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOMPlayerViewController.h; sourceTree = "<group>"; };
-		EB537B641E1388DB004EC9AB /* BOMPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOMPlayerViewController.m; sourceTree = "<group>"; };
 		EB537B691E1389E7004EC9AB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		EB720D8E1E30531900BDA526 /* BOMPlayer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BOMPlayer.storyboard; sourceTree = "<group>"; };
 		EB720DD61E30AA2E00BDA526 /* pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pause@2x.png"; sourceTree = "<group>"; };
 		EB720DD71E30AA2E00BDA526 /* pause@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pause@3x.png"; sourceTree = "<group>"; };
 		EB720DD81E30AA2E00BDA526 /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x.png"; sourceTree = "<group>"; };
 		EB720DD91E30AA2E00BDA526 /* play@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@3x.png"; sourceTree = "<group>"; };
-		EB720DDE1E30AA5000BDA526 /* fullscreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fullscreen@2x.png"; sourceTree = "<group>"; };
-		EB720DDF1E30AA5000BDA526 /* fullscreen@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fullscreen@3x.png"; sourceTree = "<group>"; };
-		EB720DE01E30AA5000BDA526 /* nonfullscreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nonfullscreen@2x.png"; sourceTree = "<group>"; };
-		EB720DE11E30AA5000BDA526 /* nonfullscreen@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nonfullscreen@3x.png"; sourceTree = "<group>"; };
+		EB720DDE1E30AA5000BDA526 /* tobig@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tobig@2x.png"; sourceTree = "<group>"; };
+		EB720DDF1E30AA5000BDA526 /* tobig@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tobig@3x.png"; sourceTree = "<group>"; };
+		EB720DE01E30AA5000BDA526 /* tosmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tosmall@2x.png"; sourceTree = "<group>"; };
+		EB720DE11E30AA5000BDA526 /* tosmall@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tosmall@3x.png"; sourceTree = "<group>"; };
 		EB720DE61E30AACE00BDA526 /* placeHolder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeHolder@2x.png"; sourceTree = "<group>"; };
 		EB720DE71E30AACE00BDA526 /* placeHolder@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeHolder@3x.png"; sourceTree = "<group>"; };
 		EB720DEE1E30AB2B00BDA526 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
@@ -94,6 +91,10 @@
 		EBB4E9C31E31F97C00FD0709 /* XCTopMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCTopMenu.m; sourceTree = "<group>"; };
 		EBB4E9C51E31F98E00FD0709 /* XCBottomMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCBottomMenu.h; sourceTree = "<group>"; };
 		EBB4E9C61E31F98E00FD0709 /* XCBottomMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCBottomMenu.m; sourceTree = "<group>"; };
+		EBB4E9C91E320D1000FD0709 /* SCYLayerAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCYLayerAddition.h; sourceTree = "<group>"; };
+		EBB4E9CA1E320D1000FD0709 /* SCYLayerAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCYLayerAddition.m; sourceTree = "<group>"; };
+		EBB4E9CB1E320D1000FD0709 /* UIView+SCYCategory..m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SCYCategory..m"; sourceTree = "<group>"; };
+		EBB4E9CC1E320D1000FD0709 /* UIView+SCYCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SCYCategory.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,11 +196,9 @@
 				EBB4E9C31E31F97C00FD0709 /* XCTopMenu.m */,
 				EBB4E9C51E31F98E00FD0709 /* XCBottomMenu.h */,
 				EBB4E9C61E31F98E00FD0709 /* XCBottomMenu.m */,
+				EBB4E9C81E320D1000FD0709 /* 适配 */,
 				EBB4E9BB1E31EC4200FD0709 /* 强制旋转 */,
 				EB720DD51E30A9FF00BDA526 /* images */,
-				EB537B631E1388DB004EC9AB /* BOMPlayerViewController.h */,
-				EB537B641E1388DB004EC9AB /* BOMPlayerViewController.m */,
-				EB720D8E1E30531900BDA526 /* BOMPlayer.storyboard */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -219,10 +218,10 @@
 				EB720DEF1E30AB2B00BDA526 /* back@3x.png */,
 				EB720DE61E30AACE00BDA526 /* placeHolder@2x.png */,
 				EB720DE71E30AACE00BDA526 /* placeHolder@3x.png */,
-				EB720DDE1E30AA5000BDA526 /* fullscreen@2x.png */,
-				EB720DDF1E30AA5000BDA526 /* fullscreen@3x.png */,
-				EB720DE01E30AA5000BDA526 /* nonfullscreen@2x.png */,
-				EB720DE11E30AA5000BDA526 /* nonfullscreen@3x.png */,
+				EB720DDE1E30AA5000BDA526 /* tobig@2x.png */,
+				EB720DDF1E30AA5000BDA526 /* tobig@3x.png */,
+				EB720DE01E30AA5000BDA526 /* tosmall@2x.png */,
+				EB720DE11E30AA5000BDA526 /* tosmall@3x.png */,
 				EB720DD61E30AA2E00BDA526 /* pause@2x.png */,
 				EB720DD71E30AA2E00BDA526 /* pause@3x.png */,
 				EB720DD81E30AA2E00BDA526 /* play@2x.png */,
@@ -238,6 +237,17 @@
 				EBB4E9BD1E31EC7A00FD0709 /* UIDevice+XCDevice.m */,
 			);
 			path = "强制旋转";
+			sourceTree = "<group>";
+		};
+		EBB4E9C81E320D1000FD0709 /* 适配 */ = {
+			isa = PBXGroup;
+			children = (
+				EBB4E9C91E320D1000FD0709 /* SCYLayerAddition.h */,
+				EBB4E9CA1E320D1000FD0709 /* SCYLayerAddition.m */,
+				EBB4E9CB1E320D1000FD0709 /* UIView+SCYCategory..m */,
+				EBB4E9CC1E320D1000FD0709 /* UIView+SCYCategory.h */,
+			);
+			path = "适配";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,18 +359,17 @@
 			files = (
 				EB720DF11E30AB2B00BDA526 /* back@3x.png in Resources */,
 				EB720DF01E30AB2B00BDA526 /* back@2x.png in Resources */,
-				EB720DE41E30AA5000BDA526 /* nonfullscreen@2x.png in Resources */,
+				EB720DE41E30AA5000BDA526 /* tosmall@2x.png in Resources */,
 				EB720DDC1E30AA2E00BDA526 /* play@2x.png in Resources */,
 				EB537B3A1E138854004EC9AB /* LaunchScreen.storyboard in Resources */,
 				EB537B371E138854004EC9AB /* Assets.xcassets in Resources */,
 				EB720DDA1E30AA2E00BDA526 /* pause@2x.png in Resources */,
-				EB720D8F1E30531900BDA526 /* BOMPlayer.storyboard in Resources */,
 				EB720DE91E30AACE00BDA526 /* placeHolder@3x.png in Resources */,
 				EB720DDB1E30AA2E00BDA526 /* pause@3x.png in Resources */,
-				EB720DE31E30AA5000BDA526 /* fullscreen@3x.png in Resources */,
-				EB720DE51E30AA5000BDA526 /* nonfullscreen@3x.png in Resources */,
+				EB720DE31E30AA5000BDA526 /* tobig@3x.png in Resources */,
+				EB720DE51E30AA5000BDA526 /* tosmall@3x.png in Resources */,
 				EB537B351E138854004EC9AB /* Main.storyboard in Resources */,
-				EB720DE21E30AA5000BDA526 /* fullscreen@2x.png in Resources */,
+				EB720DE21E30AA5000BDA526 /* tobig@2x.png in Resources */,
 				EB720DDD1E30AA2E00BDA526 /* play@3x.png in Resources */,
 				EB720DE81E30AACE00BDA526 /* placeHolder@2x.png in Resources */,
 			);
@@ -392,9 +401,10 @@
 				EBB4E9BE1E31EC7A00FD0709 /* UIDevice+XCDevice.m in Sources */,
 				EBB4E9C41E31F97C00FD0709 /* XCTopMenu.m in Sources */,
 				EB537B2F1E138854004EC9AB /* AppDelegate.m in Sources */,
-				EB537B661E1388DB004EC9AB /* BOMPlayerViewController.m in Sources */,
 				EBB4E9C71E31F98E00FD0709 /* XCBottomMenu.m in Sources */,
+				EBB4E9CE1E320D1000FD0709 /* UIView+SCYCategory..m in Sources */,
 				EB537B2C1E138854004EC9AB /* main.m in Sources */,
+				EBB4E9CD1E320D1000FD0709 /* SCYLayerAddition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
