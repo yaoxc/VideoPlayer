@@ -213,6 +213,13 @@
 
 }
 
+#pragma mark - notice method
+
+- (void)moviePlayDidEnd:(NSNotification *)notice
+{
+    
+}
+
 - (void)orientChange:(NSNotification *)notice
 {
     

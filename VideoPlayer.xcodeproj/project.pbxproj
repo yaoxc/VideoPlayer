@@ -244,8 +244,8 @@
 			children = (
 				EBB4E9C91E320D1000FD0709 /* SCYLayerAddition.h */,
 				EBB4E9CA1E320D1000FD0709 /* SCYLayerAddition.m */,
-				EBB4E9CB1E320D1000FD0709 /* UIView+SCYCategory..m */,
 				EBB4E9CC1E320D1000FD0709 /* UIView+SCYCategory.h */,
+				EBB4E9CB1E320D1000FD0709 /* UIView+SCYCategory..m */,
 			);
 			path = "适配";
 			sourceTree = "<group>";
