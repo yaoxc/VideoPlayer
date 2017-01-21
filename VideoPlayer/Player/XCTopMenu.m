@@ -20,7 +20,7 @@
 - (UIButton *)backButton{
     if (_backButton == nil) {
         _backButton = [[UIButton alloc] init];
-        [_backButton setBackgroundImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
+        [_backButton setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
         [_backButton addTarget:self action:@selector(onPressBackButton) forControlEvents:UIControlEventTouchUpInside];
     }
     return _backButton;
@@ -31,12 +31,14 @@
         _titleLabel = [[UILabel alloc] init];
         _titleLabel.font = [UIFont systemFontOfSize:18];
         _titleLabel.textColor = [UIColor whiteColor];
+        _titleLabel.text = @"视频标题";
     }
     return _titleLabel;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
+        self.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
         [self addSubviews];
     }
     return self;

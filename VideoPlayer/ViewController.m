@@ -31,8 +31,8 @@
 {
     [super viewDidAppear:animated];
 
-    XCPlayer *player = [[XCPlayer alloc] initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, 200)];
-    [player updateVideoUrlString:paths[index]];
+    XCPlayer *player = [[XCPlayer alloc] initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, 260)];
+    [player updateVideoUrlString:paths[1]];
     [self.view addSubview:player];
 }
 

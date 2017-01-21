@@ -8,6 +8,11 @@
 
 #import "XCPlayer.h"
 #import <AVFoundation/AVFoundation.h>
+#import "XCTopMenu.h"
+#import "XCBottomMenu.h"
+#import "UIView+SCYCategory.h"
+#import "UIDevice+XCDevice.h"
+#import "SCYLayerAddition.h"
 
 @interface XCPlayer ()
 
@@ -20,22 +25,48 @@
 @property (nonatomic, strong) AVPlayerLayer *playerLayer;
 @property (nonatomic, strong) AVPlayerItem *playerItem;
 
+@property (nonatomic, strong) XCTopMenu *topMenu;
+@property (nonatomic, strong) XCBottomMenu *bottomMenu;
+
 @end
 
 @implementation XCPlayer
+
+- (XCTopMenu *)topMenu
+{
+    if (_topMenu == nil) {
+        _topMenu = [[XCTopMenu alloc] init];
+    }
+    return _topMenu;
+}
+
+- (XCBottomMenu *)bottomMenu
+{
+    if (_bottomMenu == nil) {
+        _bottomMenu = [[XCBottomMenu alloc] init];
+    }
+    return _bottomMenu;
+}
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor blackColor];
+        self.backgroundColor = [UIColor whiteColor];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientChange:) name:UIDeviceOrientationDidChangeNotification object:nil];//注册监听，屏幕方向改变
         
         AVAudioSession *audioSession = [AVAudioSession sharedInstance];
         [audioSession setCategory:AVAudioSessionCategoryPlayback error:nil];
         
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientChange:) name:UIDeviceOrientationDidChangeNotification object:nil];//注册监听，屏幕方向改变
+        [self setupSubviews];
     }
     return self;
+}
+
+- (void)setupSubviews
+{
+    [self addSubview:self.topMenu];
+    [self addSubview:self.bottomMenu];
 }
 
 - (void)updateVideoUrlString:(NSString *)urlString
@@ -115,6 +146,17 @@
     } else if ([keyPath isEqualToString:@"playbackBufferEmpty"]) {
 
     }
+}
+
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    CGFloat viewW = self.width;
+    CGFloat viewH = self.height;
+    self.topMenu.frame = CGRectMake(0, 0, viewW, 40);
+    
+    self.bottomMenu.frame = CGRectMake(0, viewH - 40, viewW, 40);
 }
 
 #pragma mark - setting

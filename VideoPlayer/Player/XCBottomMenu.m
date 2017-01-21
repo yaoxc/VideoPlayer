@@ -13,7 +13,7 @@
 @interface XCBottomMenu ()
 {
     BOOL isPlay;
-    BOOL isHour;
+    BOOL isHour; // 是否包含小时
 }
 
 @property (nonatomic, strong)UIButton *playOrPauseBtn;//播放/暂停
@@ -29,6 +29,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
+        self.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
         [self addSubviews];
     }
     return self;
@@ -47,6 +48,7 @@
     if (_playOrPauseBtn == nil) {
         _playOrPauseBtn = [[UIButton alloc] init];
         [_playOrPauseBtn setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
+        _playOrPauseBtn.imageView.contentMode = UIViewContentModeScaleAspectFit;
         [_playOrPauseBtn addTarget:self action:@selector(playOrPauseAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _playOrPauseBtn;
@@ -55,7 +57,7 @@
 - (UIButton *)nextPlayerBtn{
     if (_nextPlayerBtn == nil) {
         _nextPlayerBtn = [[UIButton alloc] init];
-        [_nextPlayerBtn setImage:[UIImage imageNamed:@"button_forward"] forState:UIControlStateNormal];
+        [_nextPlayerBtn setImage:[UIImage imageNamed:@"button_next"] forState:UIControlStateNormal];
         [_nextPlayerBtn addTarget:self action:@selector(nextPlayerAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _nextPlayerBtn;
@@ -162,18 +164,31 @@
 - (void)layoutSubviews{
     [super layoutSubviews];
     
-    self.playOrPauseBtn.frame = CGRectMake(self.left+5, 8, 36, 23);
+    CGFloat viewH = self.height;
+    
+    CGFloat btnWH = 30;
+    self.playOrPauseBtn.frame = CGRectMake(5, (viewH - btnWH)*0.5, btnWH, btnWH);
     if (self.isFullScreen) {
-        self.nextPlayerBtn.frame = CGRectMake(self.playOrPauseBtn.right, 5, 30, 30);
-        [_fullOrSmallBtn setImage:[UIImage imageNamed:@"small"] forState:UIControlStateNormal];
+        self.nextPlayerBtn.frame = CGRectMake(self.playOrPauseBtn.right+5, (viewH - btnWH)*0.5, btnWH, btnWH);
+        [_fullOrSmallBtn setImage:[UIImage imageNamed:@"tosmall"] forState:UIControlStateNormal];
     }else{
-        self.nextPlayerBtn.frame = CGRectMake(self.playOrPauseBtn.right+5, 5, 0, 0);
-        [_fullOrSmallBtn setImage:[UIImage imageNamed:@"big"] forState:UIControlStateNormal];
+        self.nextPlayerBtn.frame = CGRectMake(self.playOrPauseBtn.right+5, (viewH - btnWH)*0.5, 0, 0);
+        [_fullOrSmallBtn setImage:[UIImage imageNamed:@"tobig"] forState:UIControlStateNormal];
     }
-    self.fullOrSmallBtn.frame = CGRectMake(self.width-35, 0, 35, self.height);
-    self.timeLabel.frame = CGRectMake(self.fullOrSmallBtn.left-108, 10, 108, 20);
-    self.loadProgressView.frame = CGRectMake(self.playOrPauseBtn.right+self.nextPlayerBtn.width+7, 20,self.timeLabel.left-self.playOrPauseBtn.right-self.nextPlayerBtn.width-14, 31);
-    self.playSlider.frame = CGRectMake(self.playOrPauseBtn.right+self.nextPlayerBtn.width+5, 5, self.loadProgressView.width+4, 31);
+    
+    self.fullOrSmallBtn.frame = CGRectMake(self.width-btnWH, (viewH - btnWH)*0.5, btnWH, btnWH);
+    
+    self.timeLabel.frame = CGRectMake(self.fullOrSmallBtn.left-108, (viewH - 20)*0.5, 108, 20);
+    
+    self.loadProgressView.frame = CGRectMake(self.playOrPauseBtn.right+self.nextPlayerBtn.width+7,
+                                             20,
+                                             self.timeLabel.left-self.playOrPauseBtn.right-self.nextPlayerBtn.width-14,
+                                             31);
+    
+    self.playSlider.frame = CGRectMake(self.playOrPauseBtn.right+self.nextPlayerBtn.width+5,
+                                       (viewH - 15)*0.5,
+                                       self.loadProgressView.width+4,
+                                       15);
 }
 
 #pragma mark - tool
